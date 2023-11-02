@@ -1,14 +1,9 @@
-//
-//  ViewController.swift
-//  Answer_MasteringTableView
-//
-//  Created by 伊藤明孝 on 2023/10/23.
-//
+
 
 import UIKit
 class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
     
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var vacationListTableView: UITableView!
     public var data = [
         VacationData(imagePath: "NewYork", destination: "NewYork", explanation: "Statue of Liberty,Times Square,Central Park"),
         VacationData(imagePath: "Taipei", destination: "Taipei", explanation: "Taipei 101,Shilin Night Market,Ximending"),
@@ -19,7 +14,6 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
         navigationItem.largeTitleDisplayMode = .always
         navigationController?.navigationBar.prefersLargeTitles = true
         self.setupTableView()
@@ -27,9 +21,9 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     
     private func setupTableView(){
         //MARK: ①TableViewのdelegateの設定をしよう
-        self.tableView.delegate = self
-        self.tableView.dataSource = self
-        self.tableView.register(UINib(nibName: "TableViewCell", bundle: nil), forCellReuseIdentifier: "cell")
+        self.vacationListTableView.delegate = self
+        self.vacationListTableView.dataSource = self
+        self.vacationListTableView.register(UINib(nibName: "TableViewCell", bundle: nil), forCellReuseIdentifier: "cell")
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

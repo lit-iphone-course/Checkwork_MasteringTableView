@@ -1,9 +1,4 @@
-//
-//  ViewController.swift
-//  Checkwork_MasteringTableView
-//
-//  Created by 伊藤明孝 on 2023/10/23.
-//
+
 
 //MARK: ①TableViewのdelegateの設定をしよう
 //MARK: ②ビルドした際に発生するエラーを解決しよう
@@ -14,7 +9,7 @@
 import UIKit
 class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
     
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var vacationListTableView: UITableView!
     
     public var data = [
         VacationData(imagePath: "NewYork", destination: "NewYork", explanation: ""),
@@ -26,15 +21,11 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
         navigationItem.largeTitleDisplayMode = .always
         navigationController?.navigationBar.prefersLargeTitles = true
-        self.setupTableView()
-    }
-    
-    private func setupTableView(){
+        
         //デリゲートの処理はここに書こう
-        self.tableView.register(UINib(nibName: "TableViewCell", bundle: nil), forCellReuseIdentifier: "Cell")
+        self.vacationListTableView.register(UINib(nibName: "TableViewCell", bundle: nil), forCellReuseIdentifier: "Cell")
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
