@@ -19,8 +19,8 @@
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="puV-91-v0N">
                         <rect key="frame" x="24" y="19.666666666666671" width="96" height="64"/>
                         <constraints>
+                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="96" id="9kJ-ny-jwZ"/>
                             <constraint firstAttribute="height" constant="64" id="JeN-I9-jCW"/>
-                            <constraint firstAttribute="width" constant="96" id="Rn1-Ye-82T"/>
                         </constraints>
                     </imageView>
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="BwK-dW-XdI">
