@@ -16,10 +16,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         super.viewDidLoad()
         navigationItem.largeTitleDisplayMode = .always
         navigationController?.navigationBar.prefersLargeTitles = true
-        self.setupTableView()
-    }
-    
-    private func setupTableView(){
+        
         //MARK: ①TableViewのdelegateの設定をしよう
         self.vacationListTableView.delegate = self
         self.vacationListTableView.dataSource = self
